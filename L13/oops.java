@@ -41,8 +41,21 @@ public class oops {
         // Calculator c1=new Calculator();
         // System.out.println(c1.sum(1,2));
         //?(i)-Method Overiding:-
-        Deer d=new Deer();
-        d.eat();
+        // Deer d=new Deer();
+        // d.eat();
+
+        //?Abstraction:-
+        // Horse h= new Horse();
+        // h.eat();
+        // h.walk();
+
+        // Chicken c=new Chicken();
+        // c.eat();
+        // c.walk();
+
+        //?interfaces
+        Queen q=new Queen();
+        q.moves();
 
 
 
@@ -120,20 +133,20 @@ class Student {
 //         System.out.println("breathes");
 //     }
 // }
-class Mammal extends Animal {
-    int legs;
-    void walks() {
-        System.out.println("walks");
-    }
-}
-class Bird extends Animal {
-    void fly() {
-        System.out.println("fly");
-    }
-}
-class Dog extends Mammal {
-    String breed;
-}
+// class Mammal extends Animal {
+//     int legs;
+//     void walks() {
+//         System.out.println("walks");
+//     }
+// }
+// class Bird extends Animal {
+//     void fly() {
+//         System.out.println("fly");
+//     }
+// }
+// class Dog extends Mammal {
+//     String breed;
+// }
 
 //?Derived class
 // class Fish extends Animal {
@@ -158,13 +171,66 @@ class Dog extends Mammal {
  }
  //TODO (i)-Method Overriding:-
 
- class Animal {
-    void eat() {
-        System.out.println("eats everythings");
+//  class Animal {
+//     void eat() {
+//         System.out.println("eats everythings");
+//     }
+//  }
+//  class Deer extends Animal {
+//     void eat() {
+//         System.out.println("eats grass");
+//     }
+//  }
+
+//* Abstraction:-
+//TODO(i)-Abstract classes:-
+
+abstract class Animal {
+    String color;
+    Animal () {
+        color="Brown";
     }
- }
- class Deer extends Animal {
     void eat() {
-        System.out.println("eats grass");
+        System.out.println("animal eats");
     }
- }
+    abstract void walk();
+}
+class Horse extends Animal {
+    void walk() {
+        System.out.println("Horse walks on 4 legs");
+    }
+    void changeColor() {
+        color="Dark Brown";
+    }
+}
+class Chicken  extends Animal {
+    void walk() {
+        System.out.println("Chicken walks on 2 legs");
+    }
+    void changeColor() {
+        color="Yellow";
+    }
+}
+//TODO(i)-interfaces:-
+interface ChessPlayer{
+    void moves();
+}
+
+class Queen implements ChessPlayer {
+    public void moves() {
+        System.out.println("up,down,left,right,diagonal(in all  4 dir)");
+    }
+}
+class King implements ChessPlayer {
+    public void moves() {
+        System.out.println("up,down,left,right,diagonal(by 1 steps)");
+    }
+}
+class Rook implements ChessPlayer {
+    public void moves() {
+        System.out.println("up,down,left,right");
+    }
+}
+
+
+
