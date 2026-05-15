@@ -36,6 +36,19 @@ public class Lev2 {
         }
         return true;
     }
+    public static void findArmstrongNum(String args[]) {
+        int n=sc.nextInt();
+        int originalN=n;
+
+        int digits=0;
+        int sum=0;
+        //count digits
+        while(n > 0) {
+            digits++;
+            n /= 10;
+        }
+        System.out.println(digits);
+    }
     
     public static void main(String args[]) {
         Scanner sc=new Scanner(System.in);
@@ -59,7 +72,8 @@ public class Lev2 {
         //* sum of lastDigits :-
        //    System.out.println(sumOfDigits(1234));
       // perfectNum(34);
-        System.out.println(isPrime(17));
+        // System.out.println(isPrime(17));
+        System.out.println(findArmstrongNum(153));
 
         
     }
