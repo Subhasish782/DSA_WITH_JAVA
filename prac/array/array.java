@@ -71,6 +71,15 @@ public class array {
         }
     }
     //*Trapping rain water:-
+
+    public static int linearSearchNew(int arr[],int key) {
+        for(int i=0;i < arr.length;i++) {
+            if(arr[i] == key) {
+                return i;
+            }
+        }
+        return -1;
+    }
     
     public static void main(String args[]) {
         //*Linear search:-
@@ -103,8 +112,17 @@ public class array {
         // pairsArray(num);
 
         //*SubArray:-
-        int num[]={2,4,6,8,10};
-        printSubArray(num);
+        // int num[]={2,4,6,8,10};
+        // printSubArray(num);
+        int arr[]={2,4,6,8,10,12,14,16};
+        int key=10;
+
+        int idx=linearSearchNew(arr,key);
+        if(idx == -1) {
+            System.out.println("Not FOund");
+        }else {
+            System.out.println("F0und at index"+ " = "+idx);
+        }
 
 
 
